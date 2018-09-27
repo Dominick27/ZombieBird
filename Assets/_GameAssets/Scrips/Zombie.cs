@@ -8,17 +8,21 @@ public class Zombie : MonoBehaviour {
     [SerializeField] ParticleSystem prefabblood;
     [SerializeField] float fuerza = 8f;
     [SerializeField] Text score;
-
+    [SerializeField] AudioSource sonidoMuerte;
+    private AudioSource sonidoPuntuacion;
+    private AudioSource sonidoSalto;
     private Rigidbody rb;
     private int puntuacion = 0;
-
-
+   
 	// Use this for initialization
 	void Start ()
     {
         GameConfig.ArrancaJuego();
         rb = GetComponent<Rigidbody>();
+        sonidoPuntuacion = GetComponents<AudioSource>()[0];
+        sonidoSalto = GetComponents<AudioSource>()[1];
         ActualizarScore();
+       
     }
 
     
@@ -28,23 +32,30 @@ public class Zombie : MonoBehaviour {
     void Update () {
 		if (Input.GetKeyDown("space"))
          {
-             rb.AddForce(Vector3.up * fuerza);
+            // rb.AddForce(Vector3.up * fuerza);
 
-            /*rb.velocity = Vector3.zero;
-            rb.AddForce(new Vector3(0, fuerza, 0)); */
-
+            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, fuerza, 0));
+            sonidoSalto.Play();
             //Debug.Log("Ha pulsado space");
         }
 	}
 
-    private void OnTriggerEnter(Collider other){
-        //Debug.Log("ha pasado");
+    
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("ha pasado");
         puntuacion++;
         ActualizarScore();
+        sonidoPuntuacion.Play();
         //Debug.Log("Score: " + puntuacion);
-        
     }
+
+
     private void OnCollisionEnter(Collision collision) {
+
+        //SONIDO MUERTE
+        sonidoMuerte.Play();
 
         //DETEN EL JUEGO
 

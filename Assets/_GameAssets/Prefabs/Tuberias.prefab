@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 23769891637418480}
   - component: {fileID: 65180061554164482}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: puntuacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,8 +169,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177755069675822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.35, z: 0}
-  m_LocalScale: {x: 1.5616, y: 3.3952308, z: 1.5616}
+  m_LocalPosition: {x: -0, y: 6.22, z: 0}
+  m_LocalScale: {x: 1.5616, y: 7.571365, z: 1.5616}
   m_Children: []
   m_Father: {fileID: 4424453217974968}
   m_RootOrder: 0
@@ -197,8 +197,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847801406011110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.35, z: 0}
-  m_LocalScale: {x: 1.5616, y: 3.3952308, z: 1.5616}
+  m_LocalPosition: {x: -0, y: 7.59, z: 0}
+  m_LocalScale: {x: 1.5616, y: 9.149808, z: 1.5616}
   m_Children: []
   m_Father: {fileID: 4142668408591732}
   m_RootOrder: 0
@@ -223,8 +223,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635770760361838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.06, z: 0.79}
-  m_LocalScale: {x: 2.4940736, y: 2.8995986, z: 0.42615506}
+  m_LocalPosition: {x: 0.6, y: -0.06, z: -0.01}
+  m_LocalScale: {x: 0.3617623, y: 3.0587866, z: 1.8993529}
   m_Children: []
   m_Father: {fileID: 4877878573218896}
   m_RootOrder: 2
@@ -235,8 +235,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939545452614310}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.5245247, y: -9.294709, z: -72.426735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8885803, y: -0.8071352, z: -7.272708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4424453217974968}
@@ -244,7 +244,7 @@ Transform:
   - {fileID: 4653027408262020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4985889252074038
 Transform:
   m_ObjectHideFlags: 1
@@ -516,6 +516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  limiteInf: -1
+  limiteSup: 1
+  distanciadestruccion: 20
 --- !u!136 &136533160709097288
 CapsuleCollider:
   m_ObjectHideFlags: 1

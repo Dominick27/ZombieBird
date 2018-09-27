@@ -5,10 +5,10 @@ using UnityEngine;
 public class PipeGenerator : MonoBehaviour {
 
     [SerializeField] Transform prefabTuberia;
-
+    [SerializeField] float ratioGeneracionTuberias = 0.75f;
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("GeneratePipe", 0, 0.75f);
+        InvokeRepeating("GeneratePipe", 0, ratioGeneracionTuberias);
 	}
 	
 	// Update is called once per frame
